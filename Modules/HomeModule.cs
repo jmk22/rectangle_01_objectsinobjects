@@ -16,6 +16,10 @@ namespace RectangleChecker
         Rectangle myRectangle = new Rectangle(Request.Query["side-length"], Request.Query["side-width"]);
         shapes.Add("shape1", myRectangle);
 
+        if (myRectangle.IsSquare()) {
+          Cube myCube = new Cube(myRectangle);
+          shapes.Add("shape2", myCube);
+        }
         return View["rectangle.cshtml", shapes];
       };
     }

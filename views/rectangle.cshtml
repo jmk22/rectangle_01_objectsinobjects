@@ -11,7 +11,13 @@
     <h5>Your rectangle's width is @Model["shape1"].GetWidth()</h5>
 
     @if (@Model["shape1"].IsSquare()) {
-      <p>you made a square!</p>
+      <h3>Your rectangle is a square!</h3>
+      <h5>Surface area of a cube with those dimensions: @Model["shape2"].GetSurfaceArea()</h5>
+      <h5>Volume of a cube with those dimensions: @Model["shape2"].GetVolume()</h5>
+    } else {
+      <h3>Your rectangle isn't a square!</h3>
     }
+
+    <p><a href="/">Make another rectangle!</a></p>
   </body>
 </html>
