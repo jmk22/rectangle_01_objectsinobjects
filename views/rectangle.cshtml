@@ -9,5 +9,9 @@
 
     <h5>Your rectangle's length is @Model["shape1"].GetLength()</h5>
     <h5>Your rectangle's width is @Model["shape1"].GetWidth()</h5>
+
+    @if (@Model["shape1"].IsSquare()) {
+      <p>you made a square!</p>
+    }
   </body>
 </html>

@@ -13,11 +13,6 @@ namespace RectangleChecker
       };
       Get["/rectangle"] = _ => {
         Dictionary<string, object> shapes = new Dictionary<string, object>();
-
-        // var myRectangle = new Rectangle {
-        //   Length = Request.Query["side-length"],
-        //   Width = Request.Query["side-width"]
-        // };
         Rectangle myRectangle = new Rectangle(Request.Query["side-length"], Request.Query["side-width"]);
         shapes.Add("shape1", myRectangle);
 
